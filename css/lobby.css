@@ -1,0 +1,227 @@
+
+@import url('./t9iwtat/mghayer.css');
+@import url('./t9iwtat/sinia.css');
+
+::-webkit-scrollbar {
+	width:5px;
+}
+::-webkit-scrollbar-track{
+	background-color:#216869;
+}
+::-webkit-scrollbar-thumb{
+	border-radius:20px;
+	background-color:#dce1de;
+}
+::-webkit-scrollbar-corner{
+	display:none;
+}
+/*body*/
+body{
+	opacity    : 0;
+	background : #9cc5a1;
+
+	transition : opacity .5s;
+}
+
+/*----------  main start ----------*/
+.main {
+	font-family : var(--apex);
+}
+
+/*----------  intro start ----------*/
+.main > .intro {
+}
+
+.intro .great{
+	z-index    : 1;
+	text-align : center;
+}
+
+.intro .great h1{
+	border-radius:20px;
+	background-color : #49a078;
+	font-weight      : bold;
+	color            : #1f2421;
+	text-transform   : uppercase;
+	border           : 1px solid rgba(255,255,255,50%);
+}
+
+.intro .great p{
+	background-color : #1f2421;
+	color            : #dce1de;
+	letter-spacing   : 2px;
+}
+
+.backgrawnd1{
+	position         : absolute;
+	bottom           : 0;
+	z-index          : -1;
+
+	height           : 100%;
+	width            : 100%;
+
+	background-color : #1f2421;
+
+	clip-path        : polygon(100% 9%, 0% 28%, 100% 21%, 0% 51%, 100% 34%, 0% 69%, 99% 47%, 0% 79%, 100% 67%, 0% 94%, 100% 74%, 26% 99%, 100% 82%, 72% 100%, 100% 86%);
+}
+
+.main > .intro > .row {
+	display         : flex;
+
+	height          : 100vh;
+
+	text-align      : center;
+
+	align-items     : center;
+	justify-content : center;
+}
+
+
+.main > .intro > .row > .first{
+	height : 100%;
+}
+
+.main > .intro > .row > .first > .firstwrapper{
+	background-color:rgba(0,0,0,50%);
+	overflow-y:scroll;
+	overflow-x:hidden;
+	height:100%;
+}
+.main > .intro > .row > .first h1{
+	text-transform:uppercase;
+	color :#dce1de;
+	background-color:#216869;
+	width: 100%;
+}
+
+.main > .intro > .row > .first div{
+	
+	width  : 100%;
+}
+.first div h3{
+	color:white;
+}
+.first .div1{
+	background-color:rgba(255,255,255,50%);
+	padding-bottom:10px;
+	position:sticky;
+	top:0;
+}
+.first div .rules li{
+	list-style-type: none;
+	display:flex;
+	justify-content:flex-start;
+	padding-right:20px;
+	color:#1f2421;
+	text-align:left;
+	padding-bottom:7px;
+	line-height:14px;
+}
+.first div .rules li i{
+	padding-right:5px;
+	color :#49a078;
+	
+}
+
+#membersinfo li{
+	list-style-type:none;
+	color: rgba(255,255,255,90%);
+	font-size:25px;
+	display:grid;
+	justify-content:space-around;
+}
+#membersinfo li .nickname{
+	letter-spacing:2px;
+	text-transform:uppercase;
+}
+#membersinfo li .pts {
+	color:yellow;
+}
+
+
+.main > .intro > .row > .second{
+	height : 100%;
+	overflow:hidden;
+}
+.main > .intro > .row > .second .secondwrapper{
+	background-color:rgba(0,0,0,50%);
+	overflow-y:scroll;
+	overflow-x:hidden;
+}
+
+.main > .intro > .row > .second h1{
+	width: 100%;
+	text-transform:uppercase;
+	color :#dce1de;
+	background-color:#216869;
+}
+.main > .intro > .row > .second div{
+	
+	height : 100%;
+	width  : 100%;
+}
+
+.main > .intro > .row > .col-md-6 button{
+	margin           : 0 5px;
+	padding          : 5px 20px;
+
+	background-color : black;
+	font-size        : 20px;
+	color            : white;
+	letter-spacing   : 5px;
+	border           : 2px solid black ;
+	border-radius    : 5px;
+	box-shadow       : 1px 5px 1px 1px white;
+}
+
+.main > .intro > .row > .col-md-6 button:hover{
+	background-color : white;
+	color            : black;
+}
+
+.intro .image{
+	overflow      : hidden;
+	height        : 300px;
+	width         : 300px;
+
+	border        : 2px solid white;
+	border-radius : 50%;
+	box-shadow    : 1px 20px 1px 1px black;
+
+	transition    : all .5s;
+}
+
+.intro .image:hover{
+	height : 315px;
+	width  : 315px;
+
+	border : 3px solid white;
+}
+
+.intro .image img{
+	height : 100%;
+	width  : 100%;
+}
+
+#unshowit > button{
+	border: transparent;
+	background-color:transparent;
+	cursor: pointer;
+	color:white;
+	position: absolute;
+	right: 0px;
+	top:0px;
+}
+/*----------  intro end ----------*/
+/*----------  main end ----------*/
+/*----------  media query start ----------*/
+@media only screen and (max-width :768px){
+	.main > .intro > .row > .col-md-6:last-child{
+		display         : flex;
+		justify-content : center;
+	}
+	.padleft{
+		padding-left : 15px;
+	}
+}
+/*----------  media query end ----------*/

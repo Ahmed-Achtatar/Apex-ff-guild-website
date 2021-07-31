@@ -1,0 +1,106 @@
+
+@import url('./t9iwtat/mghayer.css');
+@import url('./t9iwtat/sinia.css');
+
+/*body*/
+body{
+	background : black;
+	opacity:0;
+	transition: opacity .5s;
+}
+
+/*----------  main start ----------*/
+.main {
+	font-family:var(--apex);
+}
+/*----------  intro start ----------*/
+.main > .intro {
+
+
+}
+.backgrawnd1{
+	position:absolute;
+	height:100%;
+	width:100%;
+	bottom:0;
+	background-color : lime;
+	clip-path  : polygon(100% 9%, 0% 28%, 100% 21%, 0% 51%, 100% 34%, 0% 69%, 99% 47%, 0% 79%, 100% 67%, 0% 94%, 100% 74%, 26% 99%, 100% 82%, 72% 100%, 100% 86%);
+}
+
+.main > .intro > .row {
+	display         : flex;
+
+	height          : 100vh;
+
+	text-align      : center;
+
+	align-items     : center;
+	justify-content : center;
+}
+
+
+.padleft{
+	padding-left: 15%;
+	text-align   : center;
+}
+.main > .intro > .row > .col-md-6 h1{
+	color:white;
+	text-transform:uppercase;
+	font-weight: bold;
+}
+.main > .intro > .row > .col-md-6 p{
+	background-color:rgba(255,255,255,80%);
+	color: black;
+	letter-spacing:2px;
+}
+
+.main > .intro > .row > .col-md-6 button{
+	box-shadow: 1px 5px 1px 1px white;
+	letter-spacing:5px;
+	color:white;
+	font-size:20px;
+	padding:5px 20px;
+	margin:0 5px;
+	background-color:lime;
+	border: 2px solid white ;
+	border-radius:5px;
+}
+.main > .intro > .row > .col-md-6 button:hover{
+	color :green;
+	background-color:white;
+}
+
+.intro .image{
+	overflow      : hidden;
+	height        : 300px;
+	width         : 300px;
+
+	border        : 2px solid white;
+	box-shadow: 1px 20px 1px 1px black;
+	border-radius : 50%;
+	transition: all .5s;
+}
+.intro .image:hover{
+	border        : 3px solid green;
+	height : 315px;
+	width  : 315px;
+}
+.intro .image img{
+	height : 100%;
+	width  : 100%;
+}
+
+/*----------  intro end ----------*/
+/*----------  main end ----------*/
+/*----------  media query start ----------*/
+@media only screen and (max-width :768px){
+	.main > .intro > .row > .col-md-6:last-child{
+		display         : flex;
+		justify-content : center;
+	}
+	.padleft{
+		padding-left: 15px;
+	}
+}
+
+/*----------  media query end ----------*/

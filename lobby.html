@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lobby</title>
+	<meta charset=utf-8>
+	<meta name=viewport content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="./css/bootstrap.min.css">
+	<link rel="stylesheet" href="./css/all.min.css">
+	<link rel="stylesheet" href="./css/lobby.css">
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
+</head>
+<body>
+
+<section class="main container-fluid">
+
+	<div class="intro">
+		<div class="great">
+			<h1>Great!</h1>
+			<p>Congratulations Hero, you entered the secret dungeon. You will be able to see everything with this light Magic</p>
+		</div>
+		<div class="row">
+			<div class="backgrawnd1"></div>
+			<div class="col-md-4 first">
+				<div class="firstwrapper">
+					<h1>Leaderboard</h1>
+					<div class="div1" id="div1">
+						<div id="unshowit"><button onclick="unshowdiv()"><i class="fas fa-trash" ></i></button></div>
+						<h3>Rules</h3>
+						<ul class="rules">
+							<li><i class="fas fa-check"></i> leaders and officers start with 20pts, members with 5pts</li>
+							<li><i class="fas fa-check"></i>To gain more pts  participate on tournaments guild wars  challenges etc admins will put pts prizes for winners.</li>
+							<li><i class="fas fa-check"></i> 1 week of inactivity removes 5 pts, if anyone gets less than -1 of pts he will be removed frome the guild</li>
+							<li><i class="fas fa-check"></i> each violation of guild rules will result on pts decrementation.</li>
+						</ul>
+					</div>
+					<div class="div2">
+						<ul id="membersinfo">
+
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-8 second">
+				<div class="secondwrapper">
+					<h1>Wars</h1>
+					<div>
+					
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<script src="./js/bootstrap.min.js"></script>
+<script src="./js/jquery.3.6.min.js"></script>
+<script src="./js/index.js"></script>
+<script src="./js/lobby.js"></script>
+<script type="text/javascript">
+	var url = "./members.json";
+	$(document).ready(function(){
+ 	 $.ajax({
+    	url: url,
+    	dataType: 'json',
+    	  error: function(){
+        console.log('JSON FAILED for data');
+      },
+      success:function(data){
+  /* the results is your json, you can reference the elements directly by using it here, without creating any additional variables */
+  
+      var membersinfo = document.getElementById("membersinfo");
+      data.sort(function(a, b){return b.pts - a.pts;});
+      data.forEach(function(element) {
+      membersinfo.insertAdjacentHTML( 'beforeend',"<li style='	list-style-type:none;color: rgba(255,255,255,90%);font-size:25px;display:flex;justify-content:space-between;margin-right:20px; '>" + "<span class='nickname' style='letter-spacing:2px; text-transform:uppercase;'>" + element.nickname + "</span>" + "<span class='pts' style='color:yellow;'>" + element.pts + "</span>"+ " </li>");
+       }); // end of forEach
+    }  // end of success fn
+   }) // end of Ajax call
+ }) // end of $(document).ready() func
+</script>
+</body>
+</html>

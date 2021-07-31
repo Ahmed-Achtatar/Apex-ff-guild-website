@@ -1,0 +1,12 @@
+@font-face{
+	font-family:"apex";
+	src:url('../../fonts/OdibeeSans-Regular.ttf');
+}
+
+
+/*  variables  */
+
+:root{
+	--apex:"apex",cursive;
+	--red:red;
+}
